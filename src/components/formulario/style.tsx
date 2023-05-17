@@ -10,8 +10,12 @@ const animationDashboard = keyframes`
   }
 `;
 
+export const Html = styled.html`
+height:100vh;
+`
 
 export const Corpo = styled.body`
+
 width: 100%;
   animation: ${animationDashboard} 1s forwards;
   opacity: 0;
@@ -33,14 +37,17 @@ button{
 
 
 background-color:#121214;
-height: 500PX;
+height: 100%;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 
+
 @media screen and (min-width: 425px) {
-    height:700px;
+  
+  
+
     div{
       width:300px;
     }
@@ -51,7 +58,7 @@ align-items:center;
 export const ContainerForm = styled.form`
 
 background-color:#343B41 ;
-width:30%;
+width:50%;
 display:flex;
 justify-content: center;
 align-items:center;
@@ -128,6 +135,25 @@ div{
     align-items:center;
     
 }
+
+@media screen and (min-width: 425px) {
+  
+  width:400px;
+
+  div{
+    width:300px;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  
+  width:300px;
+
+  div{
+    width:300px;
+  }
+}
+
 `
 export const DivApart = styled.div`
 h1{

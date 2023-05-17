@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link } from "react-router-dom";
 
-
+import { Html } from "./style";
 
 import { Ilogin, useSimulationContext } from "../contexct/contexct";
 
@@ -24,8 +24,7 @@ function TelaLogin() {
     email: yup.string().required("Email obrigatorio").email("Email invalido"),
     password: yup
       .string()
-      .required("Digite sua senha")
-      .min(8, " A senha deve possuir no minimo 8 caracteres"),
+      .required("Digite sua senha"),
   });
 
   const {
@@ -37,6 +36,7 @@ function TelaLogin() {
 
 
   return (
+    <Html>
     <Corpo>
       <h1>Kenzie Hub</h1>
       <Formlogin className="Login" onSubmit={handleSubmit(submitFunction)}>
@@ -61,6 +61,7 @@ function TelaLogin() {
         </div>
       </Formlogin>
     </Corpo>
+    </Html>
   );
 }
 

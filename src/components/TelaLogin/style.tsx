@@ -6,6 +6,10 @@ const animationDashboard = keyframes`
     opacity: 1;
   }
 `;
+export const Html = styled.html`
+height:100vh;
+`
+
 export const Corpo = styled.body`
 
   animation: ${animationDashboard} 1s forwards;
@@ -20,14 +24,14 @@ color:#FF427F;
 font-size:30px;
 }
 background-color:#121214;
-height: 500PX;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 
 @media screen and (min-width: 425px) {
-    height:700px;
+    height:100%;
+    width:100%
     
 }
 `
@@ -36,14 +40,14 @@ align-items:center;
    
 export const Formlogin = styled.form`
 @media screen and (min-width: 425px) {
-    height:45%;
+    height:300px;
     
 }
 
 
 background-color:#343B41 ;
 width:50%;
-height:60%;
+height:400px;
 display:flex;
 flex-direction: column;
 justify-content: center;
@@ -59,7 +63,7 @@ h2{
     color:white;
     font-family :"inter";
     font-weight: 200;
-    margin-bottom:40px;
+    margin-bottom:20px;
     
 }
 

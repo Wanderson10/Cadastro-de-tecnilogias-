@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 export const Corpo = styled.body`
 background-color:#121214;
-height:1000px;
+height:100vh;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -31,7 +31,7 @@ h1{
 button{
     border:none;
     height:30px;
-    width:7%;
+    width:50px;
     border-radius:4px;
     color:white;
     background-color:#868E96;

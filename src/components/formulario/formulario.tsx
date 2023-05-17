@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ContainerForm } from "./style";
 import { Corpo } from "./style";
-import { DivApart } from "./style";
+import { DivApart ,Html} from "./style";
 import { IDataRegistration } from "../contexct/contexct";
 import { useSimulationContext } from "../contexct/contexct";
 import { ButtomLeave } from "./style";
@@ -47,17 +47,17 @@ const navigate = useNavigate();
  
 
   return (
+    <Html>
     <Corpo>
       <DivApart>
         {" "}
         <h1>Kenzie Hub</h1>{" "}
-        <ButtomLeave onClick={()=>MYlink()}>Login</ButtomLeave>
+        <ButtomLeave onClick={()=>MYlink()}>Voltar</ButtomLeave>
       </DivApart>
       <ContainerForm onSubmit={handleSubmit(onSubmitFunction)}>
         <h2>Crie sua conta</h2>
         <div>
-          <label htmlFor="nome"
-         >Nome {errors.name && <span>{errors.name.message}</span>}</label>
+          <label htmlFor="nome">Nome {errors.name && <span>{errors.name.message}</span>}</label>
           <input {...register("name")} type="text"></input>
           <p>{errors.name && errors.name.message}</p>
         </div>
@@ -110,6 +110,7 @@ const navigate = useNavigate();
         </div>
       </ContainerForm>
     </Corpo>
+    </Html>
   );
 }
 
